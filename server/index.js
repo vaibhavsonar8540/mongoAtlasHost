@@ -15,6 +15,10 @@ app.use(cors({
 app.use(cookieParser())
 
 
+app.get("/",(req,res)=>{
+    res.send("route is working")
+})
+
 app.use("/api/blog/", blogRouter)
 app.use("/api/user/", userRouter)
 
